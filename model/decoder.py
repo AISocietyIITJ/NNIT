@@ -86,8 +86,8 @@ class Decoder(nn.Module):
         word[i].append(y.tolist())
 
     return word
-
-decoder =Decoder()
-output=decoder(encoder_output,positional_encoding)
-output=torch.tensor(output)
-print(output.shape)
+if __name__ =="__main__":
+    decoder =Decoder()
+    output=decoder(encoder_output,positional_encoding)
+    output=torch.tensor(output)
+    print(output.shape)
